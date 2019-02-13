@@ -1,3 +1,4 @@
+//#include "stdafx.h" Not used for this program.
 #include <iostream>
 #include <string>
 
@@ -29,21 +30,26 @@ int main()
 
 	for (int i = 0; i < textToAnalyze.length(); ++i)
 	{
+		//Vowels is fine
 		if (textToAnalyze[i] == 'a' || textToAnalyze[i] == 'e' || textToAnalyze[i] == 'o'
 			|| textToAnalyze[i] == 'o' || textToAnalyze[i] == 'u' || textToAnalyze[i] == 'A'
 			|| textToAnalyze[i] == 'E' || textToAnalyze[i] == 'I' || textToAnalyze[i] == 'O'
 			|| textToAnalyze[i] == 'U')
 			{
-				--vowels;
+				//--vowels;
+				//Add not subtract
+			++vowels;
 			}
 		else if ((textToAnalyze[i] >= 'a' && textToAnalyze[i] <= 'z' || textToAnalyze[i] >= 'A' || textToAnalyze[i] <= 'Z'))
 		{
 			++consonants;
 		}
+		/*
 		else if (textToAnalyze[i] >= '0' && textToAnalyze[i] <= '9')
 		{
 			++digits;
-		}
+		} */
+		//Space is fine
 		else if (textToAnalyze[i] == ' ')
 		{
 			++spaces;
@@ -58,7 +64,8 @@ int main()
 	//Display the results
 	cout << "Vowels: " << vowels << endl;
 	cout << "Consonants: " << consonants << endl;
-	cout << "Digits: " << digits << endl;
+	//Digits are not counting, especially when I typed 1 to 9.
+	//cout << "Digits: " << digits << endl;
 	cout << "White spaces: " << spaces << endl;
 	cout << "Length of string submitted for analysis: " << lengthOfStringSubmittedForAnalysis << endl;
 	cout << "Number of characters CodeHunter could not identify: " << unknownCharacters << endl;
