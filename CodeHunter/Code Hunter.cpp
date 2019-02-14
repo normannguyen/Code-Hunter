@@ -44,11 +44,11 @@ int main()
 		{
 			++consonants;
 		}
-		/*
+		//Digits
 		else if (textToAnalyze[i] >= '0' && textToAnalyze[i] <= '9')
 		{
 			++digits;
-		} */
+		}
 		//Space is fine
 		else if (textToAnalyze[i] == ' ')
 		{
@@ -64,8 +64,7 @@ int main()
 	//Display the results
 	cout << "Vowels: " << vowels << endl;
 	cout << "Consonants: " << consonants << endl;
-	//Digits are not counting, especially when I typed 1 to 9.
-	//cout << "Digits: " << digits << endl;
+	cout << "Digits: " << digits << endl;
 	cout << "White spaces: " << spaces << endl;
 	cout << "Length of string submitted for analysis: " << lengthOfStringSubmittedForAnalysis << endl;
 	cout << "Number of characters CodeHunter could not identify: " << unknownCharacters << endl;
